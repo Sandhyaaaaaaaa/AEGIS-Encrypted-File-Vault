@@ -1,0 +1,282 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+/* Enable smooth scrolling globally */
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #0f172a;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+/* For smoother animations and transitions */
+* {
+  box-sizing: border-box;
+}
+
+/* Beautiful custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(15, 23, 42, 0.5);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #3b82f6, #8b5cf6);
+  border-radius: 10px;
+  border: 2px solid rgba(15, 23, 42, 0.5);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #2563eb, #7c3aed);
+}
+
+/* Firefox scrollbar */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #3b82f6 rgba(15, 23, 42, 0.5);
+}
+
+html, body, #root {
+  height: 100%;
+  overflow-x: hidden;
+}
+
+.upload-container {
+  display: flex;
+  min-height: 100vh;
+}
+
+.upload-main {
+  flex: 1;
+  padding: 40px;
+  background-color: #f5f5f5;
+}
+
+.upload-main h1 {
+  margin-bottom: 30px;
+  color: #1e1e2f;
+}
+
+.upload-box {
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+}
+
+.upload-box:hover {
+  transform: translateY(-5px);
+}
+
+.drag-drop-area {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 150px;
+  border: 2px dashed #1e1e2f;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+.drag-drop-area:hover {
+  background-color: #f0f0f0;
+  border-color: #33335c;
+}
+
+.upload-btn {
+  padding: 12px 25px;
+  background-color: #1e1e2f;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.3s ease;
+}
+
+.upload-btn:hover {
+  background-color: #33335c;
+}
+
+.file-details {
+  margin-top: 25px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.file-details h3 {
+  margin-bottom: 10px;
+}
+
+/* Sidebar Styles */
+.sidebar {
+  width: 220px;
+  background-color: #1e1e2f;
+  color: #fff;
+  min-height: 100vh;
+  padding: 20px;
+  transition: width 0.3s ease;
+  position: fixed;
+}
+
+.sidebar.collapsed {
+  width: 60px;
+}
+
+.sidebar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.sidebar-header h2 {
+  font-size: 18px;
+  margin: 0;
+}
+
+.toggle-btn {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.sidebar nav ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.sidebar nav ul li {
+  margin-bottom: 20px;
+}
+
+.sidebar nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  transition: color 0.2s;
+}
+
+.sidebar nav ul li a:hover {
+  color: #00bfff;
+}
+
+/* Smooth scroll for all containers */
+.MuiContainer-root,
+.MuiBox-root {
+  scroll-behavior: smooth;
+}
+
+/* Ensure pages can scroll */
+[class*="MuiBox-root"] {
+  overflow-y: auto;
+}
+
+/* Optional: adjust page content when sidebar collapsed */
+.sidebar.collapsed ~ .content {
+  margin-left: 60px;
+}
+
+/* Improved Text Contrast for Better Visibility */
+.MuiTypography-root {
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.MuiTypography-h1,
+.MuiTypography-h2,
+.MuiTypography-h3,
+.MuiTypography-h4,
+.MuiTypography-h5,
+.MuiTypography-h6 {
+  color: #ffffff !important;
+  font-weight: 600 !important;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6) !important;
+}
+
+/* Reduce heading sizes for better proportions */
+.MuiTypography-h1 {
+  font-size: 2rem !important;
+}
+
+.MuiTypography-h2 {
+  font-size: 1.75rem !important;
+}
+
+.MuiTypography-h3 {
+  font-size: 1.5rem !important;
+}
+
+.MuiTypography-h4 {
+  font-size: 1.25rem !important;
+}
+
+.MuiTypography-h5 {
+  font-size: 1.1rem !important;
+}
+
+.MuiTypography-h6 {
+  font-size: 1rem !important;
+}
+
+.MuiTypography-body1,
+.MuiTypography-body2 {
+  color: #ffffff !important;
+  line-height: 1.7 !important;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5) !important;
+}
+
+.MuiListItemText-primary {
+  color: #ffffff !important;
+  font-weight: 500 !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4) !important;
+}
+
+/* Better contrast for form labels */
+.MuiInputLabel-root {
+  color: #cbd5e1 !important;
+  font-weight: 500 !important;
+}
+
+/* Better contrast for input text */
+.MuiInputBase-input {
+  color: #ffffff !important;
+}
+
+/* Better contrast for table text */
+.MuiTableCell-root {
+  color: #ffffff !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4) !important;
+}
+
+/* Better contrast for chip text */
+.MuiChip-label {
+  font-weight: 600 !important;
+}
+
+/* Better contrast for button text */
+.MuiButton-root {
+  font-weight: 600 !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* Ensure all text is readable */
+p, span, div, label {
+  color: inherit;
+}
