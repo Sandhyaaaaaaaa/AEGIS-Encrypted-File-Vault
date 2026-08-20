@@ -2,7 +2,7 @@ import express from 'express';
 import jwt from 'jsonwebtoken';
 import speakeasy from 'speakeasy';
 import qrcode from 'qrcode';
-import User from '../models/user.js';
+import User from '../models/User.js';
 import File from '../models/File.js';
 import { protect } from '../middleware/authMiddleware.js';
 import { createLog } from '../utils/auditHelper.js';
